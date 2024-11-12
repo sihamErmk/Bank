@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .navbar-custom {
+      background-color: #003366; /* Dark blue background */
+    }
+    .navbar-custom .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .navbar-custom .navbar-brand:hover {
+      color: #ccc;
+    }
+    .navbar-custom .nav-link {
+      color: #ffffff;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #cccccc;
+    }
+    .navbar-custom .nav-link.active {
+      color: #ffd700; /* Gold color for active link */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" routerLink="/home">Banking App 💴</a>
+
+      <!-- Navbar Toggle Button (for mobile views) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Home Link -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+
+          <!-- Accounts Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Accounts
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="accountsDropdown">
+              <li><a class="dropdown-item" routerLink="/accounts">View Accounts</a></li>
+            </ul>
+          </li>
+
+          <!-- Clients Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="clientsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Clients
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="clientsDropdown">
+              <li><a class="dropdown-item" routerLink="/clients">Client List</a></li>
+              <li><a class="dropdown-item" routerLink="/clients-form">Add Client</a></li>
+            </ul>
+          </li>
+
+          <!-- Employees Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="employeesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Employees
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="employeesDropdown">
+              <li><a class="dropdown-item" routerLink="/employees">Employee List</a></li>
+              <li><a class="dropdown-item" routerLink="/employees-form">Add Employee</a></li>
+            </ul>
+          </li>
+
+          <!-- Groups Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="groupsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Groups
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="groupsDropdown">
+              <li><a class="dropdown-item" routerLink="/groupes">Group List</a></li>
+              <li><a class="dropdown-item" routerLink="/groupes-form">Add Group</a></li>
+            </ul>
+          </li>
+
+          <!-- Operations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="operationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Operations
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="operationsDropdown">
+              <li><a class="dropdown-item" routerLink="/operation-form">Add Operation</a></li>
+              <li><a class="dropdown-item" routerLink="/operation">Operation History</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

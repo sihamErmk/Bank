@@ -1,0 +1,20 @@
+<!-- Add Employee Form inside a Card -->
+<div class="card" style="max-width: 500px; margin: 20px auto;">
+  <div class="card-header">
+    <h4>Ajouter un Employé</h4>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+      <!-- Name Input -->
+      <div class="form-group mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" id="nom" class="form-control" placeholder="Nom" [(ngModel)]="employe.nom" name="nom" required />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary w-100">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>

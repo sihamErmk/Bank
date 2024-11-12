@@ -1,0 +1,63 @@
+/* Ensure consistent background color for section and nav */
+section, nav {
+  background-color: #194387;
+  transition: background-color 0.3s ease;
+}
+
+.Logo {
+  color: #ffffff;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+/* Responsive adjustments for Logo */
+@media (max-width: 1024px) {
+  .Logo {
+    font-size: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Logo {
+    font-size: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Logo {
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Adjust font size for navigation links */
+.nav-link {
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,70 @@
+<!-- Groupe List Template -->
+<div class="card" style="max-width: 900px; margin: 20px auto;">
+  <div class="card-header">
+    <h4>Liste des Groupes</h4>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom du Groupe</th>
+          <th>ID Employee A  ajouter</th>
+          <th>Ajouter Employé</th>
+          <th>Supprimer Groupe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let groupe of groupes">
+          <td>{{ groupe.id }}</td>
+          <td>{{ groupe.nom }}</td>
+
+          <!-- Add Employee to Group -->
+          <td>
+            <label for="employeId-{{ groupe.id }}">ID Employé:</label>
+            <input type="number" [(ngModel)]="employeId" name="employeId-{{ groupe.id }}" class="form-control" placeholder="ID de l'employé">
+          </td>
+          <td>
+            <button (click)="onAddEmployeToGroupe(groupe.id, employeId)" class="btn btn-success">
+              Ajouter Employé
+            </button>
+          </td>
+
+          <!-- Delete Group -->
+          <td>
+            <button (click)="deleteGroupe(groupe.id)" class="btn btn-danger">
+              Supprimer
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Employees Table inside each group -->
+    <div *ngFor="let groupe of groupes">
+      <div *ngIf="groupe.employes && groupe.employes.length > 0">
+        <h5>Liste des Employés dans le groupe {{ groupe.nom }}:</h5>
+        <table class="table table-bordered mt-3">
+          <thead>
+            <tr>
+             <!---- <th>ID</th>-->
+              <th>Nom de l'Employé</th>
+             <!---- <th>Supprimer l'Employé</th>-->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employe of groupe.employes">
+             <!---- <td>{{ employe.id }}</td>-->
+              <td>{{ employe.nom }}</td>
+              <td>
+                <!--<button (click)="onDeleteEmployeFromGroupe(groupe.id, employe.id)" class="btn btn-danger">
+                  Supprimer
+                </button>-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

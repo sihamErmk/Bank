@@ -1,0 +1,97 @@
+<!-- Display Success or Error Message -->
+<div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger">
+  {{ errorMessage }}
+</div>
+
+<!-- Form inside a Card with smaller width and spacing between each form element -->
+<div class="card" style="max-width: 500px; margin: 20px auto;">
+  <div class="card-header">
+    <h4>Create Account</h4>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="createAccount()">
+
+      <div class="form-group mb-3">
+        <label for="balance">Balance</label>
+        <input type="number" class="form-control" id="balance" [(ngModel)]="accountDto.balance" name="balance" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="id_Client">Client ID</label>
+        <input type="number" class="form-control" id="id_Client" [(ngModel)]="accountDto.id_Client" name="id_Client" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="decouvert">Decouvert</label>
+        <input type="number" class="form-control" id="decouvert" [(ngModel)]="accountDto.decouvert" name="decouvert" required>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="interetRate">Interest Rate</label>
+        <input type="number" class="form-control" id="interetRate" [(ngModel)]="accountDto.interetRate" name="interetRate" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Buttons to Get Accounts centered -->
+<h3 class="mt-4 text-center">Accounts</h3>
+<div class="text-center mb-3">
+  <button class="btn btn-primary mb-2 pl-3 mr-3" (click)="getAccounts('CA')">Courant Accounts</button>
+</div>
+<div class="text-center mb-3">
+  <button class="btn btn-primary mb-2 pl-3" (click)="getAccounts('SA')">Saving Accounts</button>
+</div>
+
+
+
+<!-- Display error or success message -->
+<div *ngIf="errorMessage" class="error-message mt-3">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div *ngIf="successMessage" class="success-message mt-3">
+  <p>{{ successMessage }}</p>
+</div>
+
+<!-- Display accounts if available -->
+<div *ngIf="accounts.length > 0" class="mt-4">
+  <!-- Accounts Section inside a Card -->
+  <div class="card" style="max-width: 800px; margin: 20px auto;">
+    <div class="card-header">
+      <h4>Accounts List</h4>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>Balance</th>
+            <th>Created Date</th>
+            <th>Status Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of accounts">
+            <td>{{ account.accountNumber }}</td>
+            <td>{{ account.balance | currency }}</td>
+            <td>{{ account.createdDate | date:'short' }}</td>
+            <td>{{ account.status }}</td>
+            <td>
+              <button class="btn btn-success btn-sm" (click)="toggleAccountStatus(account.accountNumber, 'active')">Activate</button>
+              <button class="btn btn-danger btn-sm" (click)="toggleAccountStatus(account.accountNumber, 'suspend')">Suspend</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

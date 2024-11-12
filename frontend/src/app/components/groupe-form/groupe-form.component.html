@@ -1,0 +1,22 @@
+<!-- Group Form inside a Card -->
+<div class="card" style="max-width: 500px; margin: 20px auto;">
+  <div class="card-header">
+    <h4>Formulaire de Groupe</h4>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+
+      <!-- Group Name Input -->
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom :</label>
+        <input type="text" id="nom" class="form-control" [(ngModel)]="groupe.nom" name="nom" required />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary w-100">Enregistrer</button>
+      </div>
+
+    </form>
+  </div>
+</div>

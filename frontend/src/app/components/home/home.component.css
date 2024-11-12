@@ -1,0 +1,80 @@
+/* Apply a global background color to the whole page */
+html, body {
+  height: 100%; /* Ensure the body and html take full height */
+  background-color: #f0f0f0; /* Change this to your preferred background color */
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove default margin */
+}
+
+/* Custom Padding */
+.custom-padding {
+  padding-right: 30px !important;  /* Added !important to ensure padding is applied */
+  padding-left: 90px !important;   /* Added !important to ensure padding is applied */
+}
+
+/* Section Header and Title Styles */
+.sub-title {
+  text-align: center; /* Centers the paragraph text */
+  width: 80%;         /* Optional: Set a width for the paragraph */
+  margin-left: auto;  /* Centers the element horizontally */
+  margin-right: auto; /* Centers the element horizontally */
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom Section Background */
+.custom-section {
+  background-color: #e7f3ff; /* Background color for the whole section */
+  padding: 3rem 0; /* Padding for top and bottom */
+  width: 100%; /* Ensures the section stretches across the full width */
+}
+
+/* Custom Heading Color */
+.custom-heading {
+  color: #194387;
+}
+
+/* Custom Subtitle Color */
+.custom-subtitle {
+  color: #4a5568; /* Adjust this color */
+}
+
+/* Custom Title Color */
+.custom-title {
+  color: #194387; /* Adjust this color */
+}
+
+/* Custom Paragraph Color */
+.custom-paragraph {
+  color: #4a5568; /* Adjust this color */
+}
+
+/* Custom Button Background */
+.custom-button {
+  background-color: #194387; /* Adjust this color */
+}
+
+/* Custom Button Hover Color */
+.custom-button:hover {
+  background-color: #f8f484; /* Adjust this color */
+}
+
+/* Custom Card Background */
+.custom-card {
+  background-color: #194387; /* Adjust this color */
+}
+
+/* Custom Card Title Color */
+.custom-card-title {
+  color: #ffffff;
+}
+
+/* Custom Card Paragraph Color */
+.custom-card-paragraph {
+  color: #edf2f7; /* Adjust this color */
+}
+
+/* Ensure the container has consistent background color */
+.container {
+  background-color: #e7f3ff; /* Ensures the background is consistent */
+  padding: 0; /* Optional: Adjust padding if needed */
+}

@@ -1,0 +1,13 @@
+<!-- Employee List inside a Card -->
+<div class="card" style="max-width: 600px; margin: 20px auto;">
+  <div class="card-header">
+    <h4>Liste des Employés</h4>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li *ngFor="let employe of employees" class="list-group-item">
+        {{ employe.nom }}
+      </li>
+    </ul>
+  </div>
+</div>
