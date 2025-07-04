@@ -1,0 +1,7 @@
+node_modules
+target
+.git
+.gitignore
+README.md
+Jenkinsfile
+*.log
