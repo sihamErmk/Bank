@@ -61,4 +61,4 @@ npm start
 ## Technologies
 - Spring Boot, Spring Data JPA, Spring Web
 - Angular, TypeScript, Bootstrap, Tailwind
-- MySQL, Maven, Jenkins, AWS EC2
+- MySQL, Maven, Jenkins, AWS EC2....
